@@ -1,7 +1,14 @@
+/**  Load  */
+window.alert('Make sure to Click the Logo!');
+
+window.addEventListener('load', () => {
+	bodyTag.style.backgroundColor = 'black';
+});
+
 /** MouseEnter  */
-const mouseEnter = document.querySelector('body');
-mouseEnter.addEventListener('mouseenter', () => {
-	mouseEnter.style.backgroundColor = '#878181';
+const bodyTag = document.querySelector('body');
+bodyTag.addEventListener('mouseenter', () => {
+	bodyTag.style.backgroundColor = '#878181';
 });
 
 const newHeaders = document.querySelectorAll('h2');
@@ -44,9 +51,9 @@ function WindowSize() {
 window.addEventListener('resize', WindowSize);
 
 /** Double Click  */
-const dblClick = document.querySelectorAll('img');
-dblClick[0].addEventListener('dblclick', () => {
-	dblClick[0].setAttribute(
+const imgTags = document.querySelectorAll('img');
+imgTags[0].addEventListener('dblclick', () => {
+	imgTags[0].setAttribute(
 		'src',
 		'https://media4.giphy.com/media/13HgwGsXF0aiGY/giphy.gif'
 	);
@@ -78,9 +85,33 @@ pTags[2].addEventListener('mouseenter', () => {
 });
 
 /** Key Down  */
+newHeaders[1].addEventListener('mouseenter', () => {
+	newHeaders[2].textContent = 'Press A Key ⌨';
+});
+
+window.addEventListener('keydown', () => {
+	pTags[3].innerText = 'You Pressed A key';
+	imgTags[1].setAttribute('src', 'https://i.gifer.com/758U.gif');
+});
 
 /** Key Up  */
+window.addEventListener('keyup', () => {
+	pTags[4].innerText = 'The Key Went up!';
+	imgTags[2].setAttribute(
+		'src',
+		'https://media1.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif'
+	);
+});
 
-/**   */
+/** MouseUp  */
 
-/**   */
+const MouseUpEvent = () => {
+	newHeaders[3].innerText = 'We Change After You Click! 🚀';
+	pTags[5].innerText = 'Surprise!🎉🎉🎉🎉🎉🎉';
+	imgTags[3].setAttribute(
+		'src',
+		'https://thecodinglove.com/content/030/Ubp37r9.gif'
+	);
+};
+
+window.addEventListener('mouseup', MouseUpEvent);
