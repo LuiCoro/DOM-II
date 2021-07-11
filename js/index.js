@@ -1,3 +1,11 @@
+/** Tags!  */
+const bodyTag = document.querySelector('body');
+const newTitles = document.querySelectorAll('h2');
+const mouseClick = document.querySelector('h1');
+const ScreenSize = document.querySelectorAll('.nav-link');
+const imgTags = document.querySelectorAll('img');
+const pTags = document.querySelectorAll('p');
+
 /**  Load  */
 window.alert('Make sure to Click the Logo!');
 
@@ -6,26 +14,24 @@ window.addEventListener('load', () => {
 });
 
 /** MouseEnter  */
-const bodyTag = document.querySelector('body');
+
 bodyTag.addEventListener('mouseenter', () => {
 	bodyTag.style.backgroundColor = '#878181';
 });
 
-const newHeaders = document.querySelectorAll('h2');
-newHeaders[0].addEventListener('mouseenter', () => {
-	newHeaders[0].innerText = 'Double Click Image ⬆';
-	newHeaders[0].style.color = 'white';
-	newHeaders[0].style.border = 'solid 5px black ';
+newTitles[0].addEventListener('mouseenter', () => {
+	newTitles[0].innerText = 'Double Click Image ⬆';
+	newTitles[0].style.color = 'white';
+	newTitles[0].style.border = 'solid 5px black ';
 });
-newHeaders[1].addEventListener('mouseenter', () => {
-	newHeaders[1].innerText = 'Copy This ⬆';
-	newHeaders[1].style.color = 'white';
-	newHeaders[1].style.borderBottom = 'solid 5px white';
+newTitles[1].addEventListener('mouseenter', () => {
+	newTitles[1].innerText = 'Copy This ⬆';
+	newTitles[1].style.color = 'white';
+	newTitles[1].style.borderBottom = 'solid 5px white';
 });
 
 /** Click  */
 
-const mouseClick = document.querySelector('h1');
 mouseClick.addEventListener('click', () => {
 	mouseClick.style.color = '#57d658';
 	mouseClick.style.backgroundColor = 'gray';
@@ -35,7 +41,6 @@ mouseClick.addEventListener('click', () => {
 
 /** Resize  */
 
-const ScreenSize = document.querySelectorAll('.nav-link');
 ScreenSize[0].addEventListener('mouseleave', () => {
 	ScreenSize[0].textContent = 'Width:';
 });
@@ -51,7 +56,7 @@ function WindowSize() {
 window.addEventListener('resize', WindowSize);
 
 /** Double Click  */
-const imgTags = document.querySelectorAll('img');
+
 imgTags[0].addEventListener('dblclick', () => {
 	imgTags[0].setAttribute(
 		'src',
@@ -60,7 +65,7 @@ imgTags[0].addEventListener('dblclick', () => {
 });
 
 /** Copy  */
-const pTags = document.querySelectorAll('p');
+
 pTags[0].addEventListener('copy', event => {
 	const selection = document.getSelection();
 	event.clipboardData.setData(
@@ -85,8 +90,8 @@ pTags[2].addEventListener('mouseenter', () => {
 });
 
 /** Key Down  */
-newHeaders[1].addEventListener('mouseenter', () => {
-	newHeaders[2].textContent = 'Press A Key ⌨';
+newTitles[1].addEventListener('mouseenter', () => {
+	newTitles[2].textContent = 'Press A Key ⌨';
 });
 
 window.addEventListener('keydown', () => {
@@ -106,7 +111,7 @@ window.addEventListener('keyup', () => {
 /** MouseUp  */
 
 const MouseUpEvent = () => {
-	newHeaders[3].innerText = 'We Change After You Click! 🚀';
+	newTitles[3].innerText = 'We Change After You Click! 🚀';
 	pTags[5].innerText = 'Surprise!🎉🎉🎉🎉🎉🎉';
 	imgTags[3].setAttribute(
 		'src',
